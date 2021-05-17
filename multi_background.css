@@ -1,0 +1,4 @@
+background: 
+   url(number.png) 600px 10px no-repeat,  /* On top,    like z-index: 4; */
+   url(thingy.png) 10px 10px no-repeat,   /*            like z-index: 3; */
+   url(Paper-4.png);                      /* On bottom, like z-index: 1; */
