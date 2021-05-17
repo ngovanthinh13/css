@@ -1,0 +1,22 @@
+.section_7{
+    margin-top: 187px;
+    background-image: url("../images/section_7_c.png");
+    height: 434px;
+    width: auto;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        background: rgba(0,0,0,.5);
+      }
+    .section_7_background{
+        background: url("../images/section_7_al.png"), 
+                    url("../images/section_7_ul.png"), 
+                    url("../images/section_7_ar.png"),
+                    url("../images/section_7_ur.png");
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+        background-position:top left, bottom left, top right, bottom right;
+    }
+}
