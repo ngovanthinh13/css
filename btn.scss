@@ -1,0 +1,74 @@
+%btn-tmp {
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  line-height: 46px;
+  position: relative;
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &:hover {
+    color: #CFA132;
+    &:before {
+      box-sizing: border-box;
+      transform: scale(1);
+      transform-origin: top left;
+    }
+    &:after {
+      border-color: transparent transparent transparent #CFA132;
+    }
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+    border: 2px solid #CFA132;
+    background: white;
+    color: #CFA132;
+    transform: scale(0,1);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 0;
+    right: 8px;
+    top: 50%;
+    border-width: 7px 0 7px 11px;
+    border-color: transparent transparent transparent white;
+    border-style: solid;
+    transform: translate(0, -50%) scale(0.5);
+    z-index: 2;
+  }
+}
+// ----------------------html
+//<div class = "btn">
+//     <a>
+// <span>ten nut nhan
+// </span>
+// </a>
+// div -> a -> span
+.btn {
+      display: block;
+      position: relative;
+      box-sizing: border-box;
+      width: 196px;
+      height: 46px;
+      margin-right: 10px;
+      background: #CFA132;
+      color: white;
+      text-align: center;
+      a {
+        @extend %btn-tmp;
+        font-size: 16px;
+      }
+}
